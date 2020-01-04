@@ -23,8 +23,8 @@ DWORD WINAPI SummerThread(HMODULE hModule)
 		float* y = (float*)y_address;
 		ReadProcessMemory(handle, (BYTE*)y_address, &y, sizeof(y), nullptr);
 
-		std::cout << "y address = " << "0x" << std::hex << y_address << std::endl;
 		std::cout << "flyHack = " << flyHack << std::endl;
+		//TODO: std::cout << "godMode = " << flyHack << std::endl;
 
 		if (GetAsyncKeyState(VK_SHIFT)) {
 			*y += 6;
